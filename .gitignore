@@ -1,1 +1,7 @@
 .vscode
+*.img
+*.adf
+*.xml
+*.tfw
+*.tif
+log
