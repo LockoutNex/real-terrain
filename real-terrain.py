@@ -11,8 +11,8 @@ GDAL_TRANSLATE_BIN = 'bin/gdal_translate.exe'
 INPUT_DIR = 'input/'
 OUTPUT_DIR = 'output/'
 
-parser = argparse.ArgumentParser(description='Generate a 16-bit PNG' \
-                                             'heightmap from USGS data')
+parser = argparse.ArgumentParser(description='Generate a 16-bit PNG ' \
+                                             'heightmaps from USGS data')
 parser.add_argument('data', metavar='input_data', 
                     help='Name of the input data (IMG or ArcGrid)')
 parser.add_argument('-r', metavar='output_resolution', type=str,
