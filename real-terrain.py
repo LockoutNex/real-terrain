@@ -52,7 +52,7 @@ class HeightMap(object):
     def gdal_info(self):
         gdal_info_cmd = [GDAL_INFO_BIN, '-stats', output_tif]
         try:
-            print('\n>>> Converting elevation information')
+            print('\n>>> Extracting elevation information')
             self.raster_info = str(subprocess.check_output(gdal_info_cmd))
         except subprocess.CalledProcessError as e:
             print("Failed to retrieve raster information:\n", e.output)
