@@ -12,7 +12,7 @@ INPUT_DIR = 'input/'
 OUTPUT_DIR = 'output/'
 
 parser = argparse.ArgumentParser(description='Generate a 16-bit PNG ' \
-                                             'heightmaps from USGS data')
+                                             'heightmap from USGS data')
 parser.add_argument('data', metavar='input_data', 
                     help='Name of the input data (IMG or ArcGrid)')
 parser.add_argument('-r', metavar='output_resolution', type=str,

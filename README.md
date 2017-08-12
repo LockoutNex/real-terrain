@@ -68,7 +68,7 @@ Move this entire directory into the input/ folder within the real-terrain direct
 python real-terrain.py --help
 usage: real-terrain.py [-h] [-r output_resolution] input_data
 
-Generate a 16-bit PNGheightmap from USGS data
+Generate a 16-bit PNG heightmap from USGS data
 
 positional arguments:
   input_data            Name of the input data (IMG or ArcGrid)
