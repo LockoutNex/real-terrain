@@ -1,8 +1,8 @@
 # RealTerrain
 
-RealTerrain is a small Python script which aims to make it easier to convert
-USGS elevation data (IMG or ArcGrid format) into high quality 16-bit PNG files 
-suitable for use as heightmaps in modern game engines.
+RealTerrain is a small Python3 script which aims to make it easier to convert
+USGS elevation data (IMG, ArcGrid or GeoTIFF format supported) into high quality 
+16-bit PNG files suitable for use as heightmaps in modern game engines.
 
 This script uses the compiled GDAL binaries for Windows provided by 
 [GIS Internals](http://www.gisinternals.com/release.php) so you will need to run
@@ -44,8 +44,8 @@ you will get a list of all the elevation data which exists within the area you
 selected. Scroll through the list and look for interesting topology from the
 thumbnail view. Click the 'Download' link to download one of the files.
 
-__Important__: The file formats compatabile with this script are IMG and ArcGrid.
-
+__Important__: The file formats compatabile with this script are IMG, ArcGrid
+and GeoTIFF.
 
 ## RealTerrain Usage Instructions
 
@@ -71,15 +71,15 @@ usage: real-terrain.py [-h] [-r output_resolution] input_data
 Generate a 16-bit PNG heightmap from USGS data
 
 positional arguments:
-  input_data            Name of the input data (IMG or ArcGrid)
+  input_data            Name of the input data (IMG, ArcGrid or GeoTIFF)
 
 optional arguments:
   -h, --help            show this help message and exit
   -r output_resolution  Resolution of the final output (default 4096x4096)
 ```
 
-If you are converting from an IMG file, simply specify the name of the IMG file
-within the /input folder that you want to convert. For example:
+If you are converting from an IMG or GeoTIFF file, simply specify the name of the 
+file within the /input folder that you want to convert. For example:
 ```python
 python real-terrain.py my_img_input.img
 ```

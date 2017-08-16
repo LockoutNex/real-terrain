@@ -2,7 +2,9 @@
 
 import argparse
 import datetime
+import random
 import re
+import string
 import sys
 import subprocess
 
@@ -21,7 +23,7 @@ args = parser.parse_args()
 res = args.r
 input_data = args.data
 
-ts = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
+ts = datetime.datetime.now().strftime('%Y%m%dT%H%M%S_')
 
 class HeightMap(object):
     def __init__(self, resolution):
@@ -29,9 +31,9 @@ class HeightMap(object):
         self.raster_info = ''
         self.min_elevation = ''
         self.max_elevation = ''
-        self.ts = ts
+        self.uid = ''.join(random.choice(string.ascii_lowercase) for i in range(4)) 
         self.input_data = INPUT_DIR + input_data
-        self.output_png = OUTPUT_DIR + self.ts + '_heightmap.png'
+        self.output_png = OUTPUT_DIR + ts + self.uid + '_heightmap.png'
 
     def generate(self):
         self.gdal_info()
